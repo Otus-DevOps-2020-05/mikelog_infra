@@ -30,6 +30,6 @@
 
     Данные для  Travis-CI
     ```
-    bastion_IP = 84.201.138.96
+    bastion_IP = 84.201.152.107
     someinternalhost_IP = 10.129.0.21
     ```
