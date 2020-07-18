@@ -8,3 +8,11 @@ apt-get --assume-yes upgrade
 apt-get --assume-yes install pritunl mongodb-org iptables
 systemctl start pritunl mongod
 systemctl enable pritunl mongod
+ext_ip=$(curl ifconfig.me)
+ssl_domain="$(echo $ext_ip | sed 's/\./-/g').sslio.ip"
+echo ""
+echo "Managamrnt inerface:"
+echo "https://$ssl_domain"
+echo ""
+echo "Let's encrypt domain for FINE SSL !!!"
+echo $ssl_domain
