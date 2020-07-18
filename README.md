@@ -28,6 +28,31 @@
     ```
     и нажать  Enter
 
+# Установка pritunl
+Скачиваем:
+```
+wget https://github.com/Otus-DevOps-2020-05/mikelog_infra/blob/cloud-bastion/setupvpn.sh
+````
+Выставляем права
+```
+chmod +x setupvpn.sh
+```
+Выполняем:
+```
+./setupvpn.sh
+```
+После выполнения будет выдана информация, например:
+```
+Managament inerface:
+https://84-201-152-107.sslip.io
+
+Let's encrypt domain for FINE SSL !!!
+84-201-152-107.sslip.io
+```
+Где **84-201-152-107.sslip.io**  это параметр необходимый для работы веб интерфейса по   https
+
+
+
     Данные для  Travis-CI
     ```
     bastion_IP = 84.201.152.107
