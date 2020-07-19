@@ -58,3 +58,10 @@ Let's encrypt domain for FINE SSL !!!
     bastion_IP = 84.201.152.107
     someinternalhost_IP = 10.129.0.21
     ```
+# Работа с  yacloud cli и деплой тестового приложения
+
+Данные для  Travis-CI
+```
+testapp_IP=84.201.136.194
+testapp_port=9292
+```
