@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-gpg_key_is=$(apt-key list | grep EA312927 -c)
+gpg_key_is=$(apt-key list | grep 058F8B6B -c)
 if [ "$gpg_key_is" -eq 0 ]
 then
- sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
- sudo bash -c 'echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.2.list'
+ wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 else
  echo "Mongokey is installed"
 fi
