@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 gpg_key_is=$(apt-key list | grep EA312927 -c)
 if [ "$gpg_key_is" -eq 0 ]
 then

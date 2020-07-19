@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ruby_inst=""
 rubyFull_is=$(dpkg --list | grep -i ruby-full -c)
