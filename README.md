@@ -71,6 +71,7 @@ yc compute instance create \
   --metadata serial-port-enable=1
 ```
 user-data=metadata.yml - указываем, что считывать параметры и инструкции к выполнению необходимо из файла  [metadata.yml](./metadata.yml)
+
 [metadata_v2.yml](./metadata_v2.yml) предоставляет другой вариант исполнения скрипта при старте
 
 Данные для  Travis-CI
