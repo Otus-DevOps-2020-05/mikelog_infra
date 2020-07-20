@@ -59,6 +59,19 @@ Let's encrypt domain for FINE SSL !!!
     someinternalhost_IP = 10.129.0.21
     ```
 # Работа с  yacloud cli и деплой тестового приложения
+Создание  ВМ из  CLI с автоматическим выполнением набора команд:
+```
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata-from-file user-data=metadata.yml \
+  --metadata serial-port-enable=1
+```
+user-data=metadata.yml - указываем, что считывать параметры и инструкции к выполнению необходимо из файла  [metadata.yml](./metadata.yml)
+[metadata_v2.yml](./metadata_v2.yml) предоставляет другой вариант исполнения скрипта при старте
 
 Данные для  Travis-CI
 ```

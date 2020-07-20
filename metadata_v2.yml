@@ -5,7 +5,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC0f22fgzSq+Csqy4VsQ0JDDDUvlZXYhpaj+ggiDX+dUlkX2ZgbyKSSb8ZYmD+V0in+3rRtXNPSP27SzA7cvIkfyHJU8il2qUoKjxev/fnQkfh5e+SgiJ6dJyTUqHtRttChPA28YRQB4ajYwSsshAGcyckMZSAvAxO35UvaXT9Drq1LV2N9X0L5NyAnePUlEeBKkyIpJOTDuXhnFprfDWHUGG4XVfNPLxtOigSNLAoMDxkSvXs3oFCuo0Ie2lZKhLfoJeQ3XB/kAwZQ9gMp3zt9eyhnom+C6uroMhv0jTLVslfg/igAr8e5/XNEHKQigztU+31VjaQZhfpoyHP+JtEu9+/G/X6AIAItTJzmGs5bONltOfsSt1aA78wA+yyKEEs7g+X1rtzUY3SgUQsb6ivSwq5NDiZ+zStdIMvMDRxYuO+Aj4OKJ8FgYnzd2IXKHfIlXCDCSSq+o3qLdd+4vsazaCGmFdEKmyVs3UnJnC5KYY68hmFE9BjvFMUHtD0wAJE= appuser
+      - ssh-rsa AAAAB3NzaC1yc.....jvFMUHtD0wAJE= appuser
 package_update: true
 write_files:
   - path: /home/appuser/startup_script.sh
