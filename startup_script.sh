@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "Preinstal step"
-apt-get install apt-transport-https ca-certificates
+sudo apt update
+sudo apt-get install apt-transport-https ca-certificates
 
 ruby_inst=""
 rubyFull_is=$(dpkg --list | grep -i ruby-full -c)

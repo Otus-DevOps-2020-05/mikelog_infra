@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "Preinstal step"
-apt-get install apt-transport-https ca-certificates
+sudo apt update
+sudo apt-get install apt-transport-https ca-certificates
 
 gpg_key_is=$(apt-key list | grep 058F8B6B -c)
 if [ "$gpg_key_is" -eq 0 ]
