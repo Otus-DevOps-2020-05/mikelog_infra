@@ -62,6 +62,6 @@ Let's encrypt domain for FINE SSL !!!
 
 Данные для  Travis-CI
 ```
-testapp_IP=84.201.136.194
+testapp_IP=130.193.38.188
 testapp_port=9292
 ```
