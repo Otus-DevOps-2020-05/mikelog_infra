@@ -1,11 +1,12 @@
 {
- "folder_id": "infra-00007",
- "source_image_family": "ubuntu-1604-lts",
- "machine_type": "f1-micro",
- "disk_size": "16",
- "disk_type": "pd-ssd",
- "image_description": "My first own image via PACKER",
- "network": "default",
- "ssh_username": "appuser",
- "zone": "asia-east1-b"
-}
+    "folder_id": "folder_id",
+    "source_image_family": "ubuntu-1604-lts",
+    "platform_id": "standard-v1",
+    "disk_size_gb": "16",
+    "disk_type": "network-hdd",
+    "image_description": "My first own image via PACKER",
+    "subnet_id": "default",
+    "ssh_username": "ubuntu",
+    "zone": "ru-central1-a",
+    "service_account_key_file": "key.json"
+   }
