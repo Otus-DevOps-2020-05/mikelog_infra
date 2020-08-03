@@ -2,15 +2,15 @@
 resource "yandex_lb_target_group" "reddit-target-group" {
   name      = "reddit-target-group"
   region_id = var.zone
-  dynamic "target"{
-    for_each = [ for instance in  yandex_compute_instance.app:{
-        address = instance.network_interface.0.ip_address
-        subnet_id = var.subnet_id
+  dynamic "target" {
+    for_each = [for instance in yandex_compute_instance.app : {
+      address   = instance.network_interface.0.ip_address
+      subnet_id = var.subnet_id
       }
-     ]
+    ]
     content {
       subnet_id = target.value.subnet_id
-      address = target.value.address
+      address   = target.value.address
     }
   }
 }
