@@ -26,7 +26,7 @@ resource "yandex_compute_instance" "app" {
 }
 
 resource "null_resource" "provisioner-app" {
-
+  count = "${var.use_provisioner ? 1 : 0}"
   connection {
     type  = "ssh"
     host  = yandex_compute_instance.app.network_interface.0.nat_ip_address

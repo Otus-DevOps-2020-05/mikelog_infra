@@ -26,7 +26,7 @@ resource "yandex_compute_instance" "db" {
 }
 
 resource "null_resource" "provisioner-db" {
-  #count = "${var.use_provisioner ? 1 : 0}"
+  count = "${var.use_provisioner ? 1 : 0}"
 
   connection {
     host        = yandex_compute_instance.db.network_interface.0.nat_ip_address
