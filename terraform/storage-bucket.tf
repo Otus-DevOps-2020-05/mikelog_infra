@@ -1,5 +1,5 @@
 
 
 resource "yandex_storage_bucket" "create_bucket" {
-  bucket = ["storage-bucket-stage", "storage-bucket-prod"]
+  bucket = "storage-bucket-stage"
 }
