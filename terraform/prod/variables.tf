@@ -37,3 +37,31 @@ variable inst_cnt {
   description = "Count of instances"
   default     = "1"
 }
+
+variable app_disk_image {
+description = "Disk image for reddit app"
+default = "reddit-app-base"
+}
+
+variable db_disk_image {
+description = "Disk image for reddit app"
+default = "reddit-db-base"
+}
+
+variable network_name {
+  description = "Network name"
+  # Значение по умолчанию
+  default = "app-network"
+}
+
+variable subnet_name {
+  description = "Subnet name"
+  # Значение по умолчанию
+  default = "app-subnet"
+}
+
+variable cidr_blocks {
+  description = "CIDR blocks"
+  # Значение по умолчанию
+  default = ["192.168.10.0/24"]
+}
